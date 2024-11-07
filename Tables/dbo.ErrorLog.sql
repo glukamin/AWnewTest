@@ -4,7 +4,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[ErrorLog](
 	[ErrorLogID] [int] IDENTITY(1,1) NOT NULL,
-	[ErrorTime] [datetime] NOT NULL,
+	[ErrorTime1] [datetime] NOT NULL,
 	[UserName] [sysname] COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
 	[ErrorNumber] [int] NOT NULL,
 	[ErrorSeverity] [int] NULL,
