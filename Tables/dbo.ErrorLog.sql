@@ -5,7 +5,7 @@ GO
 CREATE TABLE [dbo].[ErrorLog](
 	[ErrorLogID] [int] IDENTITY(1,1) NOT NULL,
 	[ErrorTime] [datetime] NOT NULL,
-	[UserName4] [sysname] COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
+	[UserName] [sysname] COLLATE SQL_Latin1_General_CP1_CI_AS NOT NULL,
 	[ErrorNumber] [int] NOT NULL,
 	[ErrorSeverity] [int] NULL,
 	[ErrorState] [int] NULL,
@@ -21,7 +21,7 @@ CREATE TABLE [dbo].[ErrorLog](
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Primary key for ErrorLog records.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'ErrorLog', @level2type=N'COLUMN',@level2name=N'ErrorLogID'
 GO
-EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The user who executed the batch in which the error occurred.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'ErrorLog', @level2type=N'COLUMN',@level2name=N'UserName4'
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The user who executed the batch in which the error occurred.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'ErrorLog', @level2type=N'COLUMN',@level2name=N'UserName'
 GO
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'The error number of the error that occurred.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'ErrorLog', @level2type=N'COLUMN',@level2name=N'ErrorNumber'
 GO
